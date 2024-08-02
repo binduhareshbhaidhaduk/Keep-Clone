@@ -1,0 +1,233 @@
+body {
+  color: rgb(74, 71, 71);
+  width: 1278px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  position: relative;
+  height: 60px;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* margin-right: 20px; */
+  color: rgb(74, 71, 71);
+}
+
+.logo {
+  flex-grow: 1;
+  font-size: 24px;
+  color: rgb(74, 71, 71);
+
+}
+
+svg {
+  color: rgb(74, 71, 71);
+  font-size: 24px;
+}
+
+.profile img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.search {
+  background-color: rgb(237, 236, 236);
+  border-radius: 20px;
+  padding: 10px;
+  width: 400px;
+}
+
+.search input {
+  background-color: rgb(237, 236, 236);
+  border: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 60px; /* Adjusted to align with header */
+  left: 0;
+  height: 100vh;
+  background-color: #ffffff;
+  color: black;
+  width: 200px;
+  overflow: hidden;
+  transition: width 0.3s;
+  z-index: 1000;
+}
+
+.sidebar.closed {
+  width: 60px;
+}
+
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.sidebar-menu li:hover {
+  background-color: #c2b67793;
+  border-radius: 0 60px 60px 0; 
+}
+
+.sidebar-menu li div {
+  margin-left: 10px;
+  opacity: 1;
+}
+
+.sidebar.closed .sidebar-menu li div {
+  display: none;
+  
+}
+.sidebar.closed .sidebar-menu li:hover{
+  width: 55px; 
+}
+
+
+.note-app {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.571);
+  background-color: white;
+} 
+
+.note-form input,
+.note-form textarea {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.note-form input::placeholder,
+.note-form textarea::placeholder {
+  color: black;
+}
+
+.note-form textarea {
+  resize: none;
+}
+
+
+.note-icons {
+  display: flex;
+  justify-content: space-around;
+  /* margin-bottom: 10px; */
+}
+
+.note-icons svg {
+  cursor: pointer;
+  font-size: 20px;
+  color: rgba(28, 28, 28, 0.909);
+}
+
+.note-form button {
+  align-self: flex-end;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.notes-list {
+  margin-top: 20px;
+}
+
+.note-item {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.note-item:hover .pin-icon,
+.note-item:hover .note-icons,
+.note-item:hover .more-icon {
+  opacity: 1;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.pin-icon {
+  font-size: 16px;
+  cursor: pointer;
+  color: #2e2e2e;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.note-footer .note-icons svg {
+  font-size: 16px;
+  margin-right: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.more-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #303030;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.more-icon:hover {
+  color: #000;
+}
+
+.note-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+
+.notes{
+  width: 800px;
+}
